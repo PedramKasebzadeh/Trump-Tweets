@@ -1,0 +1,81 @@
+
+Donate to arXiv
+
+Please join the Simons Foundation and our generous member organizations in supporting arXiv during our giving campaign September 23-27. 100% of your contribution will fund improvements and new initiatives to benefit arXiv's global scientific community.
+DONATE
+
+[secure site, no need to create account]
+Skip to main content
+Cornell University
+We gratefully acknowledge support from
+the Simons Foundation and member institutions.
+arXiv.org > cs > arXiv:1103.2903
+
+Help | Advanced Search
+Search
+Download PDF
+Computer Science > Information Retrieval
+Title: A new ANEW: Evaluation of a word list for sentiment analysis in microblogs
+Authors: Finn Årup Nielsen
+(Submitted on 15 Mar 2011)
+
+    Abstract: Sentiment analysis of microblogs such as Twitter has recently gained a fair amount of attention. One of the simplest sentiment analysis approaches compares the words of a posting against a labeled word list, where each word has been scored for valence, -- a 'sentiment lexicon' or 'affective word lists'. There exist several affective word lists, e.g., ANEW (Affective Norms for English Words) developed before the advent of microblogging and sentiment analysis. I wanted to examine how well ANEW and other word lists performs for the detection of sentiment strength in microblog posts in comparison with a new word list specifically constructed for microblogs. I used manually labeled postings from Twitter scored for sentiment. Using a simple word matching I show that the new word list may perform better than ANEW, though not as good as the more elaborate approach found in SentiStrength. 
+
+Comments: 	6 pages, 4 figures, 1 table, Submitted to "Making Sense of Microposts (#MSM2011)"
+Subjects: 	Information Retrieval (cs.IR) ; Computation and Language (cs.CL)
+MSC classes: 	68M11
+ACM  classes: 	H.4.3; J.4
+Journal reference: 	Proceedings of the ESWC2011 Workshop on 'Making Sense of Microposts': Big things come in small packages (2011) 93-98
+Cite as: 	arXiv:1103.2903 [cs.IR]
+  	(or arXiv:1103.2903v1 [cs.IR] for this version)
+Bibliographic data
+[ Enable Bibex  ( What is Bibex? )]
+Submission history
+From: Finn Årup Nielsen [ view email ]
+[v1] Tue, 15 Mar 2011 13:39:20 UTC (32 KB)
+Full-text links:
+Download:
+
+    PDF
+    PostScript
+    Other formats
+
+Current browse context:
+cs.IR
+< prev  |  next >
+new  | recent  | 1103
+Change to browse by:
+cs
+cs.CL
+References & Citations
+
+    NASA ADS
+    Google Scholar
+    Semantic Scholar
+
+DBLP - CS Bibliography
+listing | bibtex
+Finn Årup Nielsen
+Export citation
+Bookmark
+BibSonomy logo Mendeley logo Reddit logo ScienceWISE logo
+Which authors of this paper are endorsers? | Disable MathJax ( What is MathJax? ) Browse v0.2.9 released 2019-02-21    Feedback?
+
+    About arXiv
+    Leadership Team
+
+    contact arXiv Click here to contact arXiv Contact
+    arXiv Twitter arXiv Twitter Follow us on Twitter
+
+    Help
+    Privacy Policy
+
+    Blog
+    Subscribe
+
+arXiv® is a registered trademark of Cornell University.
+
+arXiv Operational Status
+Get status notifications via email or slack
+
+If you have a disability and are having trouble accessing information on this website or need materials in an alternate format, contact web-accessibility@cornell.edu for assistance.

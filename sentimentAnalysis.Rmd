@@ -23,7 +23,10 @@ knitr::opts_chunk$set(echo = FALSE,message=FALSE)
 
 Donald Trump, the current president of the united states, has always been very active on social media. His explicit words have been on the top of the news many times. His post on Twitter(tweets) are the subject of this project. The goal of this project is to study the correlation between his tweets and the oil price in the international market. 
 
-To do so I performed sentiment analysis on a data sets of tweets, and gave a total point to his tweets per day, and tried to compare them to the variation of in oil price. I used two different methods of sentiment analysis (NRC and Bing).
+
+
+Sentiment analysis is the approach which is used in this project. First, a dataset of his tweets is collected. Then, by using Sentiment analysis approaches assign a point to his tweets per day. Finally, these points have been compared with the variation of oil price in world's market. In order to compare different lexicons, nrc (from Saif Mohammad and Peter Turney), AFINN (from Finn Årup Nielsen), and Bing (from Bing Liu and collaborators) have been used in this project.
+
 
 
 \newpage
@@ -36,42 +39,68 @@ To do so I performed sentiment analysis on a data sets of tweets, and gave a tot
 # Introduction
 
 
-Number of social media users, more specifically Twitter, have been dramatically increased over the past decade[@j_clement_twitter_2019]. And it plays a huge role in different aspects of our lives, politics and economics for instance. It plays a huge role in elections as well.  Donald Trump tweets are the subject of this report, the president of the united states who tweets very often and is known for his harsh tweets. In the previous US election, most of his top tweets aside from “Mexico will pay for the wall!” were attacks against other candidates and their supporters, rather than discussing politics! [@magdy_trump_2016]
-
-
-In this report, I will try to find any possible correlation between Trump tweets and oil price. The reason I wanted to investigate this is that his tweets usually have a big impact on Iran's economy. The impact is so significant that his daily tweets not only would affect Iran's currency value but also could have an effect on product prices in the markets in Iran the day after! 
-
-Although all of this could be based on the complicated relationship between Iran and the US or the corruption in Iran's regime, which drives based on spreading hate against the united states and looks for any possibility to make a profit out of it. All of this made me curious to see if his words are as important in the global community and would have any effect on some fragile variable like oil price.
+Number of social media users, more specifically Twitter, have been dramatically increased over the past decade[@j_clement_twitter_2019]. and it plays a huge role in different aspects of our people lives on daily basis. Such as rapidly change on fundamental needs e.g. oil price, fluctuation on currencies' value specially on virtual currencies as studied in [@mai_impacts_2015]. Politics is another aspect in where from local to presidential elections social media has a major role. 
 
 
 
-My approach to doing so was doing sentiment analysis. I used 3 datasets and 3 methods which I will explain in detail furthermore.
+<!-- politics and economics for instance. It plays a huge role in elections as well.  Donald Trump tweets are the subject of this report, the president of the united states who tweets very often and is known for his harsh tweets. In the previous US election, most of his top tweets aside from “Mexico will pay for the wall!” were attacks against other candidates and their supporters, rather than discussing politics! [@magdy_trump_2016] -->
 
 
 
-# Theory
-
-Sentiment analysis (also known as opinion mining or emotion AI) refers to the use of natural language processing, text analysis, computational linguistics, and biometrics to systematically identify, extract, quantify, and study affective states and subjective information. Sentiment analysis is widely applied to the voice of the customer materials such as reviews and survey responses, online and social media, and healthcare materials for applications that range from marketing to customer service to clinical medicine. [@wikipedia_sentiment_nodate] however, in this case, I focused on the voice of only 1 person. The idea was to categorize Trump's tweets. 
 
 
-Sentiment analysis is a strategy to explore whether a gathered content is in a positive, negative or neutral state, it could be done in different levels such as Sentence level, Document-level, Aspect level or user level [@international_conference_on_automation_abstract_2019]. 
 
-Sentiment analysis uses various Natural Language Processing (NLP) methods and algorithms, 3 main types of algorithms used are: Rule based (systems that perform sentiment analysis based  manually crafted rules), Automatic(systems that rely on machine learning techniques), And Hybrid(systems that used a mix of the first two).[@noauthor_sentiment_2020]
+<!--In this report, I will try to find any possible correlation between Trump tweets and oil price. The reason I wanted to investigate this is that his tweets usually have a big impact on Iran's economy. The impact is so significant that his daily tweets not only would affect Iran's currency value but also could have an effect on product prices in the markets in Iran the day after! -->
 
 
-In This project, I decided to focus on doing sentiment analysis over tweets which could be considered the same as sentence-level sentiment analysis. I used a Rule based algorithm which uses Lexicons (i.e. lists of words and expressions). Then I summed up the point of all the tweets for each day to get a conclusion of how did his tweets grade overall.
+
+In this project, the correlation between Trump's tweets and oil price in world's market is studied. The evidence from some countries such as Iran indicate that his tweets brought some difficulty in their economies, and people’s life due to it is currency became so vulnerable and fluctuated so much. Hence, in this study the actual effects of his tweets on oil price in world's market is evaluated which has the very high impact on the value of the currency in counties such as Iran.
+
+
+
+
+<!--Although all of this could be based on the complicated relationship between Iran and the US or the corruption in Iran's regime, which drives based on spreading hate against the united states and looks for any possibility to make a profit out of it. All of this made me curious to see if his words are as important in the global community and would have any effect on some fragile variable like oil price.
+
+
+
+My approach to doing so was doing sentiment analysis. I used 3 datasets and 3 methods which I will explain in detail furthermore.-->
+
+The remainder of this report is organized as follows: Section I presents an introduction about the background and methods which are used in this project. Section II Describes how the dataset is generated in detail and the preprocessing step is presented in this section. The performance of introduced method have been evaluated in Section III. The results have shown in Section IV and discussed in section V. Finally, the work is concluded in Section VI.
+
+# Section I: Theory
+
+Sentiment analysis, refers to the use of natural language processing, text analysis, and machine learning to quantify, study affactive states and extract information from a given text data. It's a stratagy to understand if a given text has posotive, negative or netural state. there are multiple levels of sentiment analysis, when it is done on a sentence it is called sentence level, document level, is when it is done over an entity. Aspect level and user level(connection between different users using graph theory) are two other levels which are not related to our work here. 
+[@saini_sentiment_2019]. 
+
+
+Natural Language Processing(NLP) is a tool that make a connection between computers and humans in their own language. For instance by using NLP computers can read text, hear speech, evaluate sentiment and decide which part should be selected. Sentiment analysis uses different NLP algorithm in order to analysis the human data. Three main types of algorithms used are: *Rule based*, *Automatic* and *Hybrid*. 
+
+
+ * *Rule based* is when systems that perform sentiment analysis based manually crafted rules, In other words a lexicon(i.e. lists of words and expressions) level sentiment analysis, which is mainly what is done in this report. 
+
+
+ * *Automatic* is reffered to when the system relies on machine learning techniques. Machine learning algorithms are devided in to 3 groups, Supervised , unsupervised and semi supervised learning. Algorithms such as Naïve Bayes, Support Vector Machine and Decision Tree are used in Supervised Learning. These algorithems use a data set to train on and then are able to classify new content. The reason this approached was not pursude in this project was lack of a labeled data set which is essential for the purpos of training these algorithms.
+
+
+ * *Hybrid* is when the system uses a mixture of thoes. Sentiment analysis could also be done in deep learning based, which could be considerd as an automatic level with a number of layers in a Neural Network. [@noauthor_sentiment_2020], [@ahmad_2019]
+
+
+In This project, sentence-level sentiment analysis is done over tweets. A rule based algorithm which uses lexicons was used due to lack of a labeled dataset. Then a score was assigned to each tweet based on its sentiments. A *day score* for each day was obtained based on scores of that day tweets, then the correlation betwen daily world oil price and *day score* was calculated.
 
 
 To find any relations between the tweets and oil price I used Pearson correlation.
 
 $$  \rho_{X,Y}= \frac{\text{cov}(X,Y)}{\sigma_X\sigma_Y}$$
 
+Where $\rho$ is the corrolation between $X$ and $Y$, $cov$ is the covariance, $\sigma_X$ is the standard deviation of $X$ and $\sigma_Y$ is the standard deviation of $Y$.  In our case X is sentiment score for each day and Y is the oil price.
 
-I also used 3 manually created lexicons, the NRC Emotion Lexicon [@mohammad_nrc_2013] (about 14,000 words), AFINN [@nielsen_new_2011] (about 2477 words and phrases), and the Bing Liu Lexicon[@kohavi_kdd-2004_2004] (about 6,800 words).
+Pearson correlation has an interval of [1,-1] where 1 means a perfect posotive corrolation while -1 means a negative corrolation(as in if one variable increases the other one would decrese).
 
 
 
-# Data
+# Section II: Data
+
+## Trump tweets 
 
 Collecting data for this project was a bit challenging. First, I used twitter APIs to collect data, however, the limitations made it not the best approach. So, I found a huge data set of tweets from many US politicians with 1.6 GB size and extracted Trump tweets. That left me with 7300 tweets from Trump in the period of 16th of July 2015 to the first of November 2016. which was not the best dataset since Trump became president as of January 20, 2017. I assumed there is a huge difference between a president tweet and a businessman tweet, which made this whole dataset useless.
 
@@ -97,9 +126,11 @@ The second dataset was a data set of all of the tweets provided on the website, 
 
 Figure1 shows a short illustration of the 10 most used words distribution in 2 categories, 'positive' and 'negative'. one interesting observation was how often Trump uses his name in his tweets and that Bing lexicon would categorize it as a Positive word! I did think about removing it from the tweets, however, since the goal is to find correlations a constant plus 1 in the scores would have no effect.
 
+## oil price 
 
-The Third dataset I needed was the oil price which is documented and was fairly easy to collect. [@thomson_europe_nodate] This dataset consists of daily oil prices for May 20th, 1987 until February 24th, 2020. Of course, I did not use the whole dataset in my case, since there was no twitter before 2006 and Trumps activity started 3 years after that on, May 2009, so a noticeable amount of the data set was useless which I removed by merging this data set with the other 2 in separate steps.
 
+Now the oil price dataset is also required.  The dataset is obtained from the internet.
+[@thomson_europe_nodate] This dataset consists of daily oil prices form May 20th, 1987 until February 24th, 2020. That being said, Figure 2 shows two plots, one of the oil prices over the whole time and the second one shows oil prices since 2009(Trump's joining date).
 
 
 \begin{figure}
@@ -110,7 +141,7 @@ The Third dataset I needed was the oil price which is documented and was fairly 
 
 
 
-That being said, Figure 2 shows two plots, one of the oil prices over the whole time and the second one shows oil prices since 2009(Trump's joining date).
+
 
 
 For evaluation purposes, I also used movie reviews dataset from text mining lab 3 [@noauthor_product_nodate], as I needed a labeled dataset.
@@ -119,15 +150,25 @@ For evaluation purposes, I also used movie reviews dataset from text mining lab 
 ## preprocessing 
 
 
-To do this project, after collecting the data the most essential part was data cleaning. Data cleaning refers to identifying incomplete, duplicate, incorrect, inaccurate or irrelevant parts of the data and then replacing, modifying, or deleting the dirty or coarse data.[@international_conference_on_automation_abstract_2019] to do so I had to use different libraries and multiple functions. 
+To do this project, after collecting the data the most essential part was data cleaning. Data cleaning refers to identifying incomplete, duplicate, incorrect, inaccurate or irrelevant parts of the data and then replacing, modifying, or deleting the dirty or coarse data.[@saini_sentiment_2019] to do so I had to use different libraries and multiple functions. 
 
 
 
 In my survey of related work, I came across a sarcasm detection system that could be helpful on the data cleaning phase, However, I did not use it, as I was considered it might not be reliable on detecting sarcasm over Trump's tweets as even I as a human sometimes find it challenging.
 
 
+## lexicons 
 
-# Method 
+
+I also used 3 manually created lexicons, the NRC Emotion Lexicon AFINN [@nielsen_new_2011] (about 2477 words and phrases), and the Bing Liu Lexicon[@kohavi_kdd-2004_2004] (about 6,800 words).
+ 
+ * The *NRC* Emotion Lexicon provides a list of English words which is annotated manually; containing 8 basic emotions such as anger, fear, anticipation, trust, surprise, sadness, joy, and disgust and two sentiment negative and positive. The NRC Emotion list contains about 14,000 words. [@mohammad_nrc_2013]
+ *
+ *
+
+
+
+# Section III: Method 
 
 
 My method consists of 3 parts: 
@@ -157,7 +198,7 @@ I used my function and Stefan's function both on the labeled dataset from the co
 
  
 
-# Result
+# Section IV: Result
 
 In this section, you can see the result of my work, presented in graphs and tables. 
 
@@ -218,7 +259,7 @@ After comparing my method with Stefan function, I obtained higher accuracy on pr
 
 
 
-# Discussion
+# Section V: Discussion
 
 
 Figure4 reveals some interesting facts! As we can see in this plot scores are going too high or too low, considering the fundamentals of each method's score, the reason for this could be a lot of same sentiment tweets in one day. For instance, over 20 positive tweets in one day and maybe 30 negative tweets the day after. There might be very interesting psychological data to be discovered here.
@@ -238,7 +279,7 @@ Also maybe scaling lexicon scores and merging the results is something to think 
 
 
 
-# Conclusion
+# Section VI: Conclusion
 
 
 There was not any noticeable correlation between Trump's tweets and oil price fluctuations, so that means my assumption was not correct under these circumstances, which means. Oil price is not affected by what only 1 man has to tweet, even if that man is the president of the united states of America. 
