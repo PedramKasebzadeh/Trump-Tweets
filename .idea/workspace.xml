@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2aaa8488-cd04-4a22-a7bd-56711bdd756d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stackabuse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmeans.R" beforeDir="false" afterPath="$PROJECT_DIR$/Kmeans.R" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks.txt_" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._amem.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._amwh.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._army.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._aunt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._bart.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._beec.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._blue.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._bost.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._brkf.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._buck.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._cclu.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._chas.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._chin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._choc.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._comm.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._conf.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._coow.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._creo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._dcvb.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._dish.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._dome.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._econ.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._ency.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._engl.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._epia.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._epib.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._favd.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._fcsc.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._fish.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._fofb.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._fore.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._fran.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._frca.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._frch.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._gohk.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._good.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._grea.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._gtte.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._hand.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._henr.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._hosf.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._hote.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._hous.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._ital.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._jenn.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._jewi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._lady.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._ldnw.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._linc.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._mara.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._mary.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._matf.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._miss.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._neig.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._notm.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._oldv.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._orie.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._pach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._pcdg.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._prac.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._pres.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._rore.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._sauc.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._scie.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._sett.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._sevf.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._swed.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._syst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._time.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._virg.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/__MACOSX/._wash.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/amem.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/amwh.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/army.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/aunt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/bart.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/beec.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/blue.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/bost.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/brkf.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/buck.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/cclu.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/chas.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/chin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/choc.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/comm.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/conf.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/coow.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/creo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/dcvb.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/dish.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/dome.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/econ.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/ency.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/engl.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/epia.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/epib.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/favd.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/fcsc.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/fish.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/fofb.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/fore.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/fran.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/frca.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/frch.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/gohk.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/good.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/grea.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/gtte.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/hand.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/henr.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/hosf.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/hote.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/hous.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/ital.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/jenn.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/jewi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/lady.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/ldnw.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/linc.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/mara.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/mary.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/matf.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/miss.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/neig.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/notm.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/oldv.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/orie.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/pach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/pcdg.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/prac.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/pres.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/prho.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/rore.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/sauc.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/scie.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/sett.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/sevf.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/swed.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/syst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/time.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/virg.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/wash.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/whit.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/wosu.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/youn.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbooks/zuni.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/output_token_single_file.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-pang02.csv" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/stackabuse.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>®</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/stackabuse.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="798" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Trump-Tweets.nosync" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Trump-Tweets.nosync" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python">
+      <module name="Trump-Tweets.nosync" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2aaa8488-cd04-4a22-a7bd-56711bdd756d" name="Default Changelist" comment="" />
+      <created>1584022422886</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584022422886</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="798" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/stackabuse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
