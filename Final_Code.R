@@ -35,11 +35,11 @@ library(syuzhet)
 ##############################  Oil   ##############################################
 ####################################################################################
 
-Oil = read.csv('Oil-Price.csv',header = TRUE,stringsAsFactors = FALSE)
-Oil$Day =as.Date(Oil$Day,format="%m/%d/%y")
+Oil = read.csv('Brent_Price.csv',header = FALSE,stringsAsFactors = FALSE)
 colnames(Oil) <- c("Date","Price")
+Oil$Date =as.Date(Oil$Date,format="%m/%d/%y")
 orderd = Oil[order(Oil$Date),]
-oil =orderd[which(orderd$Date=="2009-05-01") :nrow(orderd),] 
+Oil =orderd[which(orderd$Date=="2017-01-20") :nrow(orderd),] 
 
 ####################################################################################
 ##############################  Full   #############################################
@@ -53,7 +53,7 @@ Trump$Date =as.Date(as.POSIXct(Trump$Date, format = "%m-%d-%Y %H:%M:%S"))
 
 # Specifing the date for the perio Trump was president 
 ind=which(Trump$Date=="2017-01-20")
-Trump= Trump[ind[1]:nrow(Trump),]
+Trump= Trump[1:tail(ind,1),]
 
 
 ####################################################################################
@@ -175,7 +175,7 @@ plot1=ggplot(Oil)+
 
 
 orderd = Oil[order(Oil$Date),]
-oil =orderd[which(orderd$Date=="2009-05-01") :nrow(orderd),] 
+oil =orderd[which(orderd$Date=="2017-01-20") :nrow(orderd),] 
 
 plot2=ggplot(oil)+
   geom_line(aes(x=oil$Date,y=oil$Price),color="red")+
@@ -262,17 +262,17 @@ fulldf$Price = (fulldf$Price - min(fulldf$Price)) * (7 - (-7)) / (max(fulldf$Pri
 fulldf$Price2 =  (fulldf$Price - min(fulldf$Price)) * (52 - (-30)) / (max(fulldf$Price) - min(fulldf$Price)) + (-30)
 
 ggplot(fulldf)+
-  geom_line(aes(x=Date,y=fulldf$Price,color = "Scaled price"))+
-  geom_line(aes(x=Date,y=fulldf$bing_score,color="Bing score"))+
-  geom_line(aes(x=Date,y=fulldf$Price2,color="Price in 2nd range"))+
-  geom_line(aes(x=Date,y=fulldf$nrc_score.x,color="NRC score"))+
-  geom_line(aes(x=Date,y=fulldf$Afinn_score.x,color="Afinn score"))
+  geom_line(aes(x=Date,y=Price,color = "Scaled price"),alpha=1)+
+  geom_line(aes(x=Date,y=bing_score,color="Bing score"),alpha=0.55)+
+  #geom_line(aes(x=Date,y=fulldf$Price2,color="Price in 2nd range"))+
+  geom_line(aes(x=Date,y=nrc_score.x,color="NRC score"),alpha=0.85)+
+  geom_line(aes(x=Date,y=Afinn_score.x,color="Afinn score"),alpha=0.35)
 
+Results = fulldata
+write.csv(Results,'Results.csv')
 
-write.csv(fulldf,'fulldf.csv')
-
-cor.test(fulldf$Price,fulldf$Afinn_score.x,method = "kendall", alternative = "greater",
-         exact = FALSE)
+cor.test(fulldf$Price,fulldf$bing_score)#,method = "kendall", alternative = "greater"
+         #exact = FALSE)
 
 
 #######################################################################################
@@ -283,11 +283,11 @@ cor.test(fulldf$Price,fulldf$Afinn_score.x,method = "kendall", alternative = "gr
 #######################################################################################
 #######################################################################################
 
-#The Evaluation is done in Python using Kmeans 
+# The Evaluation is done in Python using Kmeans 
 
 
 # using the full data set with related columns 
-python = read.csv("fulldata.csv")
+python = read.csv("Results.csv")
 python = python[,c(2,4,5,6,7)]
 
 

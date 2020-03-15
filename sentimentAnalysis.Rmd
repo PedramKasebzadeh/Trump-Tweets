@@ -5,7 +5,7 @@ date: "2/11/2020"
 output:  
     pdf_document
 bookdown::pdf_document2: default
-bibliography: Text mining.bib
+bibliography: TMBib.bib
 link-citations: yes
 numbersection: yes
 ---
@@ -17,15 +17,15 @@ knitr::opts_chunk$set(echo = FALSE,message=FALSE)
 
 \newpage 
 
-# Abstract 
 
 #Abstract 
 
-Donald Trump, the current president of the united states, has always been very active on social media. His explicit words have been on the top of the news many times. His post on Twitter(tweets) are the subject of this project. The goal of this project is to study the correlation between his tweets and the oil price in the international market. 
+Donald Trump, the current president of the united states, has always been very active on social media. His explicit words have been on the top of the news many times. His post on Twitter (known as tweets) are the subject of this project. The goal of this project is to study the correlation between his tweets and the oil price in the world market. 
 
 
 
-Sentiment analysis is the approach which is used in this project. First, a dataset of his tweets is collected. Then, by using Sentiment analysis approaches assign a point to his tweets per day. Finally, these points have been compared with the variation of oil price in world's market. In order to compare different lexicons, nrc (from Saif Mohammad and Peter Turney), AFINN (from Finn Årup Nielsen), and Bing (from Bing Liu and collaborators) have been used in this project.
+Sentiment analysis is the approach which is used in this project. First, a dataset of his tweets is collected. Then, by using sentiment analysis approaches points are assigned to his tweets per day. Finally, these points have been compared with the variation of oil price in world market. In order to compare different lexicons, nrc (from Saif Mohammad and Peter Turney), AFINN (from Finn Årup Nielsen), and Bing (from Bing Liu and collaborators) have been used in this project.
+
 
 
 
@@ -39,7 +39,8 @@ Sentiment analysis is the approach which is used in this project. First, a datas
 # Introduction
 
 
-Number of social media users, more specifically Twitter, have been dramatically increased over the past decade[@j_clement_twitter_2019]. and it plays a huge role in different aspects of our people lives on daily basis. Such as rapidly change on fundamental needs e.g. oil price, fluctuation on currencies' value specially on virtual currencies as studied in [@mai_impacts_2015]. Politics is another aspect in where from local to presidential elections social media has a major role. 
+Number of social media users, more specifically Twitter, have been dramatically increased over the past decade[@j_clement_twitter_2019], it plays a huge role in different aspects of our lives on daily basis. Such as, rapid change on fundamental needs e.g. oil price, fluctuation on currencies' value specially on virtual currencies as studied in [@mai_impacts_2015]. Politics is another aspect in where from local to presidential elections social media has a major role.
+
 
 
 
@@ -54,7 +55,7 @@ Number of social media users, more specifically Twitter, have been dramatically 
 
 
 
-In this project, the correlation between Trump's tweets and oil price in world's market is studied. The evidence from some countries such as Iran indicate that his tweets brought some difficulty in their economies, and people’s life due to it is currency became so vulnerable and fluctuated so much. Hence, in this study the actual effects of his tweets on oil price in world's market is evaluated which has the very high impact on the value of the currency in counties such as Iran.
+In this project, the correlation between Trump's tweets and oil price in world’s market is studied. The evidence from some countries such as Iran indicate that his tweets brought some difficulty in their economies, and people’s life due to its currency became so vulnerable and fluctuated so much. Hence, in this study the actual effects of his tweets on oil price in world's market is evaluated.
 
 
 
@@ -69,56 +70,67 @@ The remainder of this report is organized as follows: Section I presents an intr
 
 # Section I: Theory
 
-Sentiment analysis, refers to the use of natural language processing, text analysis, and machine learning to quantify, study affactive states and extract information from a given text data. It's a stratagy to understand if a given text has posotive, negative or netural state. there are multiple levels of sentiment analysis, when it is done on a sentence it is called sentence level, document level, is when it is done over an entity. Aspect level and user level(connection between different users using graph theory) are two other levels which are not related to our work here. 
-[@saini_sentiment_2019]. 
+Sentiment analysis refers to the use of natural language processing, text analysis, and machine learning to quantify, study emotion states and extract information from a given text data. It's a strategy to understand if a given text has positive, negative or neutral state. there are multiple levels of sentiment analysis, when it is done on a sentence it is called sentence level, document level, is when it is done over an entity. Aspect level and user level (connection between different users using graph theory) are two other levels which are not related to our work here. 
+[@saini_sentiment_2019].
 
 
-Natural Language Processing(NLP) is a tool that make a connection between computers and humans in their own language. For instance by using NLP computers can read text, hear speech, evaluate sentiment and decide which part should be selected. Sentiment analysis uses different NLP algorithm in order to analysis the human data. Three main types of algorithms used are: *Rule based*, *Automatic* and *Hybrid*. 
+
+Natural Language Processing (NLP) is a tool that make a connection between computers and humans in their own language. For instance, by using NLP computers can read text, hear speech, evaluate sentiment and decide which part should be selected. Sentiment analysis uses different NLP algorithm in order to analysis the human data. Three main types of algorithms used are: *Rule based*, *Automatic* and *Hybrid*. 
 
 
- * *Rule based* is when systems that perform sentiment analysis based manually crafted rules, In other words a lexicon(i.e. lists of words and expressions) level sentiment analysis, which is mainly what is done in this report. 
+ * *Rule based* is when systems that perform sentiment analysis based manually crafted rules, in other words a lexicon (i.e. lists of words and expressions) level sentiment analysis, which is mainly what is done in this report. 
 
 
- * *Automatic* is reffered to when the system relies on machine learning techniques. Machine learning algorithms are devided in to 3 groups, Supervised , unsupervised and semi supervised learning. Algorithms such as Naïve Bayes, Support Vector Machine and Decision Tree are used in Supervised Learning. These algorithems use a data set to train on and then are able to classify new content. The reason this approached was not pursude in this project was lack of a labeled data set which is essential for the purpos of training these algorithms.
+ * *Automatic* is referred to when the system relies on machine learning techniques. Machine learning algorithms are divided in to 3 groups, Supervised, unsupervised and semi supervised learning. Algorithms such as Naïve Bayes, Support Vector Machine and Decision Tree are used in supervised learning. These algorithms use a dataset to train on and then are able to classify new content. The reason this approached was not pursued in this project was lack of a labeled dataset which is essential for the purpose of training these algorithms.
 
 
- * *Hybrid* is when the system uses a mixture of thoes. Sentiment analysis could also be done in deep learning based, which could be considerd as an automatic level with a number of layers in a Neural Network. [@noauthor_sentiment_2020], [@ahmad_2019]
+
+* *Hybrid* is when the system uses a mixture of those. Sentiment analysis could also be done in deep learning based, which could be considered as an automatic level with a number of layers in a Neural Network. [@noauthor_sentiment_2020], [@ahmad_review_2019]
 
 
-In This project, sentence-level sentiment analysis is done over tweets. A rule based algorithm which uses lexicons was used due to lack of a labeled dataset. Then a score was assigned to each tweet based on its sentiments. A *day score* for each day was obtained based on scores of that day tweets, then the correlation betwen daily world oil price and *day score* was calculated.
+In This project, sentence-level sentiment analysis is done over tweets. A rule-based algorithm which uses lexicons was used due to lack of a labeled dataset. Then a score was assigned to each tweet based on its sentiments. A *day score* for each day was obtained based on scores of that day tweets, then the correlation between daily world oil price and *day score* was calculated.
 
 
 To find any relations between the tweets and oil price I used Pearson correlation.
 
-$$  \rho_{X,Y}= \frac{\text{cov}(X,Y)}{\sigma_X\sigma_Y}$$
 
-Where $\rho$ is the corrolation between $X$ and $Y$, $cov$ is the covariance, $\sigma_X$ is the standard deviation of $X$ and $\sigma_Y$ is the standard deviation of $Y$.  In our case X is sentiment score for each day and Y is the oil price.
 
-Pearson correlation has an interval of [1,-1] where 1 means a perfect posotive corrolation while -1 means a negative corrolation(as in if one variable increases the other one would decrese).
+\begin{align}
+    \rho_{X,Y}= \frac{\text{cov}(X,Y)}{\sigma_X\sigma_Y}
+\end{align}
 
+Where $\rho$ is the correlation between $X$ and $Y$, $cov$ is the covariance, $\sigma_X$ is the standard deviation of $X$ and $\sigma_Y$ is the standard deviation of $Y$.  In our case X is sentiment score for each day and Y is the oil price.
+
+Since $cov(X,Y)=E[(X-\mu_X)(Y-\mu_Y)]$, hence we can write equation 1 as:
+
+
+\begin{align}
+    \rho_{X,Y}=\frac{E[(X-\mu_X)(Y-\mu_Y)]}{\sigma_X\sigma_Y}
+\end{align}
+
+Where $\mu _{X}$ is the mean of $X$,$\mu _{Y}$ mean of $Y$ and $E$ is the expectation.
+
+
+Pearson correlation has an interval of [1,-1] where 1 means a perfect positive correlation while -1 means a negative correlation(as in if one variable increases the other one would decrees).
 
 
 # Section II: Data
 
 ## Trump tweets 
 
-Collecting data for this project was a bit challenging. First, I used twitter APIs to collect data, however, the limitations made it not the best approach. So, I found a huge data set of tweets from many US politicians with 1.6 GB size and extracted Trump tweets. That left me with 7300 tweets from Trump in the period of 16th of July 2015 to the first of November 2016. which was not the best dataset since Trump became president as of January 20, 2017. I assumed there is a huge difference between a president tweet and a businessman tweet, which made this whole dataset useless.
+Collecting data for this project was a bit challenging. First, twitter APIs was used to collect data, however, the limitations made it not the best approach, limitations such as the maximum number of tweets one can get this way. Second, a huge data set of tweets from many US politicians with 1.6 GB size was found online and Trump tweets were extracted. That left resulted in 7300 tweets from Trump in the period of 16th of July 2015 to the first of November 2016. which was not the best dataset since Trump became president as of January 20, 2017. The assumption was that there is a huge difference between a president tweet and a businessman tweet, which made this whole dataset useless.
 
-My data sets are from a website [@trump_twitter_archive_trump_nodate], this is a website mainly focused on Trump's tweets and gives a variety of options on how to filter tweets before extraction. I extracted 2 data sets from this website.
+Finally, the dataset used was from a website [@trump_twitter_archive_trump_nodate], this is a website mainly focused on Trump's tweets and gives a variety of options on how to filter tweets before extraction. The dataset extracted was a dataset of all of the tweets provided on the website, which was 46040 tweets from April 2009 to February 2020. However, furthermore It was filtered based on the date so it was just tweets in the time of Trumps presidency.
 
-
-The first one was filtered with words like "oil", "Opec", "Iraq", "Saudi", "Gulf" and "Iran" in the tweets, and just extracting tweets with such words. I tried to find the most related words to the matter by going through some of his tweets and my idea of the concept. The filtered data set has 2317 tweets in it. One critical detail about this data set was that it was not filtered by date, so there were some dates without any tweets, which is a bit different from the usual Trump's activity, that being said the dataset was dated between May 2009 and February 2020.
-
+<!--I extracted 2 data sets from this website.
 
 
-The second dataset was a data set of all of the tweets provided on the website, which was 46040 tweets from April 2009 to February 2020.
-
-
+The first one was filtered with words like "oil", "Opec", "Iraq", "Saudi", "Gulf" and "Iran" in the tweets, and just extracting tweets with such words. I tried to find the most related words to the matter by going through some of his tweets and my idea of the concept. The filtered data set has 2317 tweets in it. One critical detail about this data set was that it was not filtered by date, so there were some dates without any tweets, which is a bit different from the usual Trump's activity, that being said the dataset was dated between May 2009 and February 2020.-->
 
 \begin{figure}
 \includegraphics[width=35cm,
   height=10cm,
-  keepaspectratio]{Count}
+  keepaspectratio]{images/WordsDistribution}
 \centering 
 \caption{Top 10 Negative and Positive words}\label{Figure1}
 \end{figure}
@@ -129,42 +141,45 @@ Figure1 shows a short illustration of the 10 most used words distribution in 2 c
 ## oil price 
 
 
-Now the oil price dataset is also required.  The dataset is obtained from the internet.
-[@thomson_europe_nodate] This dataset consists of daily oil prices form May 20th, 1987 until February 24th, 2020. That being said, Figure 2 shows two plots, one of the oil prices over the whole time and the second one shows oil prices since 2009(Trump's joining date).
+Now the oil price dataset is also required.  The dataset is obtained from the internet.[@thomson_europe_nodate] This dataset consists of daily oil prices form May 20th, 1987 until March 6th, 2020. That being said, Figure 2 shows prices over the period of Trump Presidency.
 
 
 \begin{figure}
-\includegraphics{oilprice}
+\includegraphics[width=15cm,
+  height=10cm,
+  keepaspectratio]{images/Oil_vs_time.png}
 \centering 
-\caption{Oil Price over different timelines}\label{Figure2}
+\caption{Oil Price fluctuations}\label{Figure2}
 \end{figure}
 
 
-
-
-
-
-For evaluation purposes, I also used movie reviews dataset from text mining lab 3 [@noauthor_product_nodate], as I needed a labeled dataset.
+<!-- For evaluation purposes, I also used movie reviews dataset from text mining lab 3 [@noauthor_product_nodate], as I needed a labeled dataset. -->
 
 
 ## preprocessing 
 
 
-To do this project, after collecting the data the most essential part was data cleaning. Data cleaning refers to identifying incomplete, duplicate, incorrect, inaccurate or irrelevant parts of the data and then replacing, modifying, or deleting the dirty or coarse data.[@saini_sentiment_2019] to do so I had to use different libraries and multiple functions. 
+To do this project, after collecting the data the most essential part was data cleaning. Data cleaning refers to identifying incomplete, duplicate, incorrect, inaccurate or irrelevant parts of the data and then replacing, modifying, or deleting the dirty or coarse data. [@saini_sentiment_2019] to do so I had to use different libraries and multiple functions. 
 
 
 
-In my survey of related work, I came across a sarcasm detection system that could be helpful on the data cleaning phase, However, I did not use it, as I was considered it might not be reliable on detecting sarcasm over Trump's tweets as even I as a human sometimes find it challenging.
+In survey of related works, a sarcasm detection system came across  that could be helpful on the data cleaning phase, However, was not used, as its reliability on detecting sarcasm over Trump's tweets could not be guaranteed as even a human sometimes find it challenging.
+
 
 
 ## lexicons 
 
 
-I also used 3 manually created lexicons, the NRC Emotion Lexicon AFINN [@nielsen_new_2011] (about 2477 words and phrases), and the Bing Liu Lexicon[@kohavi_kdd-2004_2004] (about 6,800 words).
+Three manually created lexicons were used, the NRC Emotion Lexicon AFINN [@nielsen_new_2011] (about 2477 words and phrases), and the Bing Liu Lexicon[@kohavi_kdd-2004_2004] (about 6,800 words).
  
  * The *NRC* Emotion Lexicon provides a list of English words which is annotated manually; containing 8 basic emotions such as anger, fear, anticipation, trust, surprise, sadness, joy, and disgust and two sentiment negative and positive. The NRC Emotion list contains about 14,000 words. [@mohammad_nrc_2013]
- *
- *
+
+
+ * The *Bing* Lexicon categorizes words into positive and negative, As is one of the most popular lexicons. [@paracchini_package_2016]
+
+
+
+ * The *Afinn* Lexicon was originally generated for Twitter sentiment analysis; hence it could be a good fit for this project. It has more than 3000 words and it uses a scoring range of [5, -5] where 5 is very positive and -5 is very negative. [@nielsen_new_2011]
 
 
 
@@ -173,122 +188,132 @@ I also used 3 manually created lexicons, the NRC Emotion Lexicon AFINN [@nielsen
 
 My method consists of 3 parts: 
 
-1. Find reliable list of words with strongly positive or negative sentiment. (lexicons)
-2. Count the number of positive and negative words in each tweet.  
-3. Summing up the scores based on number of positive and negative words.
+ * 1. Find reliable list of words with strongly positive or negative sentiment. (lexicons)
 
-After cleaning the data, As I had 3 different methods to get the sentiment with, and 2 data sets, I created a function with all the necessary sentiment functions (such as tokenization) inside it, so it was more convenient to work with. Instead of running 6 functions I ran 1, twice.
-For creating the functions and performing sentiment analysis, I chose R language, it has a lot of text mining packages and is a great tool to manipulate huge datasets.[@tatman_sentiment_nodate]  
+ * 2. Count the number of positive and negative words in each tweet.  
+
+ * 3. Summing up the scores based on number of positive and negative words.
+ 
+
+
+\begin{figure}
+\includegraphics[width=15cm,
+  height=10cm,
+  keepaspectratio]{images/diagram}
+\centering
+\caption{A diagram of the process}\label{Figure3}
+\end{figure}
+
+Figure 3 shows an overview of the steps done in the process of sentiment analysis in this project.
+
+
+
+After cleaning the data, since 3 different lexicons had to be used, a function was created with all the necessary functions within (such as tokenization), so it was more convenient to work with. For creating the functions and performing sentiment analysis, R language was chosen, it has a lot of text mining packages and is a great tool to manipulate huge datasets. [@tatman_sentiment_nodate]  
 
 
 
 ## Evaluation 
 
 
-Since I could not find any reliable labeled dataset for Trump's tweets, which is needed for classification with Naïve Bayes, Logistic Regression or Support Vector Machines, I decided to test out my functions on the dataset we already used in our text mining course(732A92) [@noauthor_product_nodate]. Which is a labeled dataset of movie reviews with two possible levels "positive" and "negative". 
+As the dataset was not labeled, an unsupervised approach had to be chosen for the purpose of evaluation.
+
+Grouping similar tweets seemed like a good approach to get the possible sentiments of the tweets, a popular algorithm to do so is Kmeans [@wojcik_unsupervised_2019], however tweets are short and noisy entities hence the cause high sparseness, this challenge could overcome by the help of term frequency–inverse document frequency (tf–idf) technique, which was the chosen approach.[@orkphol_sentiment_2019]
 
 
-For evaluation I compared the accuracy I had using my function with the Sentiment Analysis function by Stefan Feuerriegel and Nicolas Proellochs[@feuerriegel_sentimentanalysis_2019].
+Kmeans would categorize the tweets in to two clusters ("Positive" and "negative") based on how similar they are considering the words used in them. Evaluation is based on the sentiment analysis scores compared to Kmeans clusters.
+ 
 
-
-For the accuracy to make sense I had to transform "Positive" and "negative" of the data set to +1 and -1 values accordingly.
-
-
-I used my function and Stefan's function both on the labeled dataset from the course to see how accurate they can predict the sentiment of a movie review. Based on the obtained results my function was more accurate with any of the 3 lexicons used.
+The evaluation part was done in Python since the word2vec function was malfunctioning on the used operating system (Mac OS).
 
  
 
-# Section IV: Result
+# Section IV: Results
 
-In this section, you can see the result of my work, presented in graphs and tables. 
-
+This section is devoted to presenting the results in form of graphs and tables. 
+<!--
 \begin{figure}
 \includegraphics[width=15cm,
   height=10cm,
-  keepaspectratio]{filtered}
+  keepaspectratio]{images/filtered}
 \centering 
 \caption{Scores for filtered data}\label{Figure3}
 \end{figure}
 
 In Figure3 we have the results for 3 different methods over-filtered data, However, it might be a bit messy at first glance, we can see different scaling for different methods (for instance AFINN has an indicator for sentiment between -5 and 5). we also have scaled oil prices just to have a resemblance to the big picture.
-
+-->
 
 \begin{figure}
 \includegraphics[width=15cm,
   height=10cm,
-  keepaspectratio]{fulldata}
+  keepaspectratio]{images/SentimentAnalysis}
 \centering
-\caption{Scores for the whole dataset}\label{Figure4}
+\caption{Sentiment Scores VS Date}\label{Figure4}
 \end{figure}
 
 
-Figure4 reveals results for 3 different methods over the second dataset (the big non-filtered one). Below you can see a table of the correlation and p-values in the filtered dataset for different methods.
+Figure 4 reveals scores for 3 different Lexicons, for each day, over the time period. Scaled oil price is also included to present a general idea. Below you can see a table of the correlation and p-values in the dataset for different lexicons.
 
 
 | Method        | Correlation         | P-Value  |
 | ------------- |:-------------:| -----:|
-| NRC      |-0.07901497  | 0.003523  |
-| Bing      | -0.01280621  |   0.6368  |
-| Afinn | -0.0554452       |    0.04076  |
+| NRC      |-0.0015351  | 0.8475  |
+| Bing      | -0.004049246   |   0.6119  |
+| Afinn | 0.02177592       |    0.006357  |
 
 
-Below is a table of p-values and correlations of the non-filtered dataset for different methods.
 
 
-| Method        | Correlation          | P-Value  |
-| ------------- |:-------------:| -----:|
-| NRC      | 0.07824593  | 9.487e-06  |
-| Bing      | 0.04989503  |   0.004782  |
-| Afinn | 0.06836199       |    0.0001099  |
+## Evaluation results 
+
+The Evaluation was done on all 3 lexicons, below you can see the accuracy, recall, precision and F1 score for each of them.
 
 
+
+
+| Method        | Accuracy           | precision           | f1  |
+| ------------- |:-------------:|:-------------:| -----:|
+| Nrc     | 0.693373 | 0.748027 | 0.730368 |
+| Afinn     | 0.713721 | 0.757445 | 0.746052 |
+| Bing     | 0.731949 | 0.716467 | 0.747974 |
 
 
 
 \newpage 
 
-## Evaluation results 
-
-After comparing my method with Stefan function, I obtained higher accuracy on predicting movies reviews sentiment. Below you can see the result in a table.
-
-| NRC        | Bing           | Afinn           | Stefan  |
-| ------------- |:-------------:|:-------------:| -----:|
-| %63     | %75 | %70 | %57 |
-
-
-
-
 
 # Section V: Discussion
 
 
-Figure4 reveals some interesting facts! As we can see in this plot scores are going too high or too low, considering the fundamentals of each method's score, the reason for this could be a lot of same sentiment tweets in one day. For instance, over 20 positive tweets in one day and maybe 30 negative tweets the day after. There might be very interesting psychological data to be discovered here.
+Figure 4 reveals some interesting facts! As we can see in this plot scores are going too high or too low, considering the fundamentals of each method's score, the reason for this could be a lot of same sentiment tweets in one day. For instance, over 20 positive tweets in one day and maybe 30 negative tweets the day after. There might be very interesting psychological data to be discovered here.
 
 
-On the filtered dataset we have an insignificant negative correlation which(assuming critical p-value is 0.05) indicates that when Trump's tweets related to oil are negative it could have a slight increase in the oil price, However in the non-filtered data set which is a collection of all of his tweets we have a positive correlation which means when he tweets something positive price would go up and when he tweets something negative price goes down. So we can that filtered data set is somewhat closer to our assumption however both of them are still very weak correlations.
+One other noticeable thing on Figure 4 is the different sum scores per day in early 2017 and early 2020, apparently his tweets have more and more positive and negative per day outcomes. either he is tweeting a lot more or using stronger words in each tweet.
 
 
-
-On the evaluation set, I noticed I have got a higher accuracy for Bing and AFINN, compared to NRC even though they have smaller word database, which means using the bigger lexicon will not always give us the best result.
-
-
-Several possibilities of improving the performance of the models exist.Maybe using some groups of features would find a better understanding of what Trump says and ends up on better results, as we can see in [@mohammad_nrc-canada_2013], doing so, resulted in great accuracy on sentiment analysis.
+On the evaluation table, a higher accuracy for Bing and AFINN, is achieved, compared to NRC even though they have smaller word database, which means using the bigger lexicon will not always give us the best result.
 
 
-Also maybe scaling lexicon scores and merging the results is something to think about, I believe that is one thing missing from my approach, The reason I did not implement it was that I could not think of an efficient and reasonable way to merge these numbers, to be more clear AFINN has a range of +5 and -5 however Bing does not have such limitation, Hence I am not sure how I should compare a 5 resulted with AFINN and a -6 given by Bing. Such concerns resulted in presenting each method separately instead of merging the results.
+Correlations between sentiment scores and oil price was very low. The most correlation achieved was with Afinn lexicon which still was quite low, and also the only positive one! nrc and Bing showed negative correlation which would initiate that Trumps negative tweets will raise oil price, if the correlation scores were higher.
 
 
 
 # Section VI: Conclusion
 
 
-There was not any noticeable correlation between Trump's tweets and oil price fluctuations, so that means my assumption was not correct under these circumstances, which means. Oil price is not affected by what only 1 man has to tweet, even if that man is the president of the united states of America. 
+There was not any noticeable correlation between Trump's tweets and oil price fluctuations, so that means my assumption was not correct under these circumstances. which means, Oil price is not affected by what only 1 man has to tweet, even if that man is the president of the united states of America. 
 
 
 Another good approach for future analysis could be using a dataset based on a specific time (e.g. when there are a lot of rumors about a war in the middle east) rather than focusing on one person.
 
 
-One thing I'm curious about is the accuracy of used and available methods for doing sentiment analysis over Trump's tweets and speeches as he is usually using very unusual structures of language and has a unique choice of words. A manually labeled set of data of his tweets is the one way, that comes to mind, to obtain any reliable accuracy of our method functioning.
+One thing I'm curious about is the accuracy of used and available methods for doing sentiment analysis over Trump's tweets and speeches as he is usually using very unusual structures of language and has a unique choice of words. A manually labeled set of data of his tweets is one way that comes to mind, to obtain a more reliable accuracy of our method functioning, other than unsupervised algorithms.
+
+
+
+Several possibilities of improving the performance exist. Maybe using some groups of features would find a better understanding of what Trump says and ends up on better results, as we can see in [@mohammad_nrc-canada_2013], doing so, resulted in great accuracy on sentiment analysis.
+
+
+Also maybe scaling lexicon scores and merging the results is something to think about, I believe that is one thing missing from my approach, The reason I did not implement it was that I could not think of an efficient and reasonable way to merge these numbers, to be more clear AFINN has a range of +5 and -5 however Bing does not have such limitation, Hence I am not sure how I should compare a 5 resulted with AFINN and a -6 given by Bing. Such concerns resulted in presenting each method separately instead of merging the results.
 
 
 \newpage
